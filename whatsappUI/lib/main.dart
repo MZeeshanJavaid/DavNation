@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_ui_clone/config/config.dart';
-import 'package:whatsapp_ui_clone/tabs/CallsTab.dart';
-import 'package:whatsapp_ui_clone/tabs/CameraTab.dart';
-import 'package:whatsapp_ui_clone/tabs/ChatsTab.dart';
-import 'package:whatsapp_ui_clone/tabs/StatusTab.dart';
+import 'package:whatsappui/config/config.dart';
+import 'package:whatsappui/tabs/CallsTab.dart';
+import 'package:whatsappui/tabs/CameraTab.dart';
+import 'package:whatsappui/tabs/ChatsTab.dart';
+import 'package:whatsappui/tabs/StatusTab.dart';
 
 void main() => runApp(App());
 
@@ -44,23 +44,18 @@ class HomePage extends StatelessWidget {
           bottom: TabBar(
             indicatorColor: Colors.white,
             tabs: <Widget>[
-
               Tab(
                 icon: Icon(Icons.camera_alt),
               ),
-
               Tab(
                 text: "CHATS",
               ),
-
               Tab(
                 text: "STATUS",
               ),
-
               Tab(
                 text: "CALLS",
               ),
-
             ],
           ),
           actions: <Widget>[
@@ -76,19 +71,15 @@ class HomePage extends StatelessWidget {
         ),
         body: TabBarView(
           children: <Widget>[
-
             CameraTab(),
             ChatsTab(),
             StatusTab(),
             CallsTab(),
-
           ],
         ),
         floatingActionButton: FloatingActionButton(
-          child: Icon(
-            Icons.chat
-          ),
-          onPressed: (){},
+          child: Icon(Icons.chat),
+          onPressed: () {},
           backgroundColor: primaryColor,
         ),
       ),

@@ -4,8 +4,8 @@ class ChatMessage {
   final String date;
 
   ChatMessage({
-    this.message,
-    this.isSentByMe,
-    this.date
+    required this.message,
+    required this.isSentByMe,
+    required this.date
   });
 }

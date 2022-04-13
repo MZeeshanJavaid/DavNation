@@ -6,10 +6,10 @@ class ChatListItem {
   final String date;
 
   ChatListItem({
-    this.profileURL,
-    this.personName,
-    this.lastMessage,
-    this.date
+    required this.profileURL,
+    required this.personName,
+    required this.lastMessage,
+    required this.date
   });
 
 }
