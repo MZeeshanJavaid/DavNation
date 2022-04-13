@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:whatsapp_ui_clone/config/config.dart';
-import 'package:whatsapp_ui_clone/models/ChatListItem.dart';
-import 'package:whatsapp_ui_clone/models/ChatMessage.dart';
+import 'package:whatsappui/config/config.dart';
+import 'package:whatsappui/models/ChatListItem.dart';
+import 'package:whatsappui/models/ChatMessage.dart';
 
 class ChatScreen extends StatelessWidget {
   final ChatListItem person;
 
-  ChatScreen({this.person});
+  ChatScreen({Key? key, required this.person}) : super(key: key);
 
   final List<ChatMessage> messages = [
     ChatMessage(
@@ -57,10 +57,7 @@ class ChatScreen extends StatelessWidget {
             ),
             child: Text(
               message.message,
-              style: TextStyle(
-                fontSize: 16,
-                color: Colors.black
-              ),
+              style: TextStyle(fontSize: 16, color: Colors.black),
             ),
           ),
         ),
@@ -90,15 +87,19 @@ class ChatScreen extends StatelessWidget {
             ),
           ),
           IconButton(
-            icon: Icon(Icons.attach_file,color: Colors.black,),
+            icon: Icon(
+              Icons.attach_file,
+              color: Colors.black,
+            ),
             onPressed: () {},
-
           ),
           FloatingActionButton(
             mini: true,
             backgroundColor: primaryColor,
-            onPressed: (){},
-            child: Icon(Icons.send,),
+            onPressed: () {},
+            child: Icon(
+              Icons.send,
+            ),
           ),
         ],
       ),
